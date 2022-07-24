@@ -1,5 +1,6 @@
 package com.zackoverflow.product.service;
 
+import com.zackoverflow.product.ProductRepository;
 import com.zackoverflow.product.dto.Product;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,8 @@ import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
+
+    private ProductRepository productRepository;
 
     List<Product> products = new ArrayList<>();
     public String addProduct(Product product) {
@@ -39,6 +42,7 @@ public class ProductService {
             if (prod.getId().equals(product.getId())) {
                 prod.setName(product.getName());
                 prod.setCategory(product.getCategory());
+                prod.setPrice(product.getPrice());
                 prod.setDiscount(product.getDiscount());
                 prod.setDiscountDescription(product.getDiscountDescription());
 

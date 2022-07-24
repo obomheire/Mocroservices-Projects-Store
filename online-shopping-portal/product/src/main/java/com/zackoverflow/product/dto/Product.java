@@ -1,12 +1,20 @@
 package com.zackoverflow.product.dto;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
+
+@Document(collection = "product")
 public class Product {
+    @id
     private Integer id;
     private String name;
     private Category category;
     private double price;
+    private String Currency;
     private double discount;
     private String discountDescription;
+    private List<String> imageURLs;
 
     public Integer getId() {
         return id;
@@ -40,6 +48,14 @@ public class Product {
         this.price = price;
     }
 
+    public String getCurrency() {
+        return Currency;
+    }
+
+    public void setCurrency(String currency) {
+        Currency = currency;
+    }
+
     public double getDiscount() {
         return discount;
     }
@@ -55,4 +71,13 @@ public class Product {
     public void setDiscountDescription(String discountDescription) {
         this.discountDescription = discountDescription;
     }
+
+    public List<String> getImageURLs() {
+        return imageURLs;
+    }
+
+    public void setImageURLs(List<String> imageURLs) {
+        this.imageURLs = imageURLs;
+    }
 }
+
