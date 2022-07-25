@@ -1,5 +1,21 @@
 package com.zackoverflow.product.dto;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Category {
+    private Integer id;
+    private String name;
+    private String brand;
+
+}
+
+/*
+
+ORIGINAL CONFIGURATION WITH GETTERS AND SETTER OR WITHOUT LOMBOK
 public class Category {
     private Integer id;
     private String name;
@@ -29,3 +45,4 @@ public class Category {
         this.brand = brand;
     }
 }
+*/

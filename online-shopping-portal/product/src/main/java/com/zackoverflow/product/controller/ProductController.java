@@ -2,21 +2,23 @@ package com.zackoverflow.product.controller;
 
 import com.zackoverflow.product.dto.Product;
 import com.zackoverflow.product.service.ProductService;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
+@Slf4j
 @RestController
 @RequestMapping("/v1")
 public class ProductController {
 
-    private static  final Logger logger = LoggerFactory.getLogger(ProductController.class);
-
+//    private static  final Logger logger = LoggerFactory.getLogger(ProductController.class); // BEFORE LOMBOK
 //    @Autowired
     private ProductService productService;
 
@@ -25,11 +27,12 @@ public class ProductController {
     }
 
     @PostMapping("/addProduct") // Post request endpoint
-    ResponseEntity<Product> addProduct(@RequestBody Product product) {
+    ResponseEntity<Product> addProduct(@RequestBody @Valid Product product) {
 
         String status = productService.addProduct(product);
 
-        logger.info("Product added status - {}", status );
+//        logger.info("Product added status - {}", status ); // BEFORE LOMBOK
+        log.info("Product added status - {}", status ); // WITH LOMBOK
 
         return ResponseEntity.status(HttpStatus.CREATED).body(product);
     }
@@ -55,7 +58,5 @@ public class ProductController {
     }
 
     @DeleteMapping("/product/{id}") // Delete product request endpoint
-    String deleteProductById(@PathVariable Integer id) {
-        return productService.deleteProductById(id);
-    }
+    String deleteProductById(@PathVariable Integer id) { return productService.deleteProductById(id); }
 }

@@ -2,16 +2,62 @@ package com.zackoverflow.product.service;
 
 import com.zackoverflow.product.ProductRepository;
 import com.zackoverflow.product.dto.Product;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 public class ProductService {
 
+    @Autowired
     private ProductRepository productRepository;
+
+//    public ProductService(ProductRepository productRepository) { // NB: this is achieved by using @Autowired as shown above
+//        this.productRepository = productRepository;
+//    }
+
+    public String addProduct(Product product) {
+
+        log.info("Adding product");
+        productRepository.save(product);
+        return "Product Successfully Added";
+    }
+
+    public List<Product> listAllproducts() {
+        return productRepository.findAll();
+    }
+
+    public List<Product> productCategoryList(String category) {
+        return productRepository.findByCategory(category);
+    }
+
+    public Product productById(Integer id) {
+        return productRepository.findById(id).get();
+    }
+
+    public String updateProduct(Product product) {
+
+        productRepository.save(product);
+        return "Product updated successfully";
+    }
+
+    public String deleteProductById(Integer id) {
+
+        productRepository.deleteById(id);
+        return "Product deleted successfully";
+    }
+}
+
+
+/*
+INITIAL CODE BEFORE MONGODB IS INCLUDED
+@Service
+public class ProductService {
 
     List<Product> products = new ArrayList<>();
     public String addProduct(Product product) {
@@ -63,4 +109,4 @@ public class ProductService {
 
         return "Fail to delete product";
     }
-}
+}*/
