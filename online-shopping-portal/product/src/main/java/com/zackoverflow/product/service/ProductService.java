@@ -2,13 +2,12 @@ package com.zackoverflow.product.service;
 
 import com.zackoverflow.product.ProductRepository;
 import com.zackoverflow.product.dto.Product;
+import com.zackoverflow.product.exception.OfferNotValidException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -22,6 +21,10 @@ public class ProductService {
 //    }
 
     public String addProduct(Product product) {
+
+        if (product.getPrice() == 0 && product.getDiscount() > 0) {
+            throw  new OfferNotValidException("Discount is not available at 0 product price");
+        }
 
         log.info("Adding product");
         productRepository.save(product);
