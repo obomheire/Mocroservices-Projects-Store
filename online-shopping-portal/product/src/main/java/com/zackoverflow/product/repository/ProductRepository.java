@@ -1,6 +1,5 @@
-package com.zackoverflow.product;
+package com.zackoverflow.product.repository;
 
-import com.zackoverflow.product.dto.Category;
 import com.zackoverflow.product.dto.Product;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends MongoRepository<Product, Integer> {
+public interface ProductRepository extends MongoRepository<Product, String> {
 
 /*  NB: Because you can query with multiple String e,g (String category, brand)
     so the 0 here will mean that you only want to query with the String at index 0

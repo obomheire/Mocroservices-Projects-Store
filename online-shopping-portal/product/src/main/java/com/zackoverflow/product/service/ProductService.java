@@ -1,6 +1,6 @@
 package com.zackoverflow.product.service;
 
-import com.zackoverflow.product.ProductRepository;
+import com.zackoverflow.product.repository.ProductRepository;
 import com.zackoverflow.product.dto.Product;
 import com.zackoverflow.product.exception.OfferNotValidException;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +39,7 @@ public class ProductService {
         return productRepository.findByCategory(category);
     }
 
-    public Product productById(Integer id) {
+    public Product productById(String id) {
         return productRepository.findById(id).get();
     }
 
@@ -49,7 +49,7 @@ public class ProductService {
         return "Product updated successfully";
     }
 
-    public String deleteProductById(Integer id) {
+    public String deleteProductById(String id) {
 
         productRepository.deleteById(id);
         return "Product deleted successfully";

@@ -22,7 +22,7 @@ WE GET ACCESS TO THESE LOMBOK BY USING @Data ANNOTATION FROM LOMBOK
 @Document(collection = "product")
 public class Product {
     @Id
-    private Integer id;
+    private String id;
     @NotNull(message = "Product name cannot be Null!")
     private String name;
     @NotNull(message = "Category cannot be Null!")
