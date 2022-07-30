@@ -1,0 +1,91 @@
+{
+        "name": "Engineering",
+        "category": {
+            "id": 1001,
+            "name": "Electrical",
+            "brand": "Lagos"
+        },
+        "price": 1000.01,
+        "currency": "NGN",
+        "discount": 1.01,
+        "discountDescription": "End of the year offer",
+        "imageURLs": ["https://umanitoba.ca/explore/programs-of-study/electrical-engineering-bsc",
+        "https://engineeringonline.ucr.edu/blog/what-does-an-electrical-engineer-do/","https://www.engineering.txstate.edu/programs/electrical.html"]
+    }
+
+
+       {
+        "name": "Engineering",
+        "category": {
+            "id": 1002,
+            "name": "Electronics",
+            "brand": "Edo"
+        },
+        "price": 2000.02,
+        "currency": "NGN",
+        "discount": 2.02,
+        "discountDescription": "End of the year offer",
+        "imageURLs": ["https://estgbenin.com/course/electrical-electronics-engineering/electrical-electronics-engineering/",
+        "https://www.studyinternational.com/news/sussex-electrical-engineering/","https://umanitoba.ca/explore/programs-of-study/electrical-engineering-bsc"]
+    }
+
+
+      {
+        "name": "Engineering",
+        "category": {
+            "id": 1003,
+            "name": "Mechanical",
+            "brand": "Lagos"
+        },
+        "price": 300.03,
+        "currency": "NGN",
+        "discount": 3.03,
+        "discountDescription": "End of the year offer",
+        "imageURLs": ["https://www.surrey.ac.uk/news/five-reasons-study-mechanical-engineering-surrey",
+        "https://www.industriall-union.org/what-we-do/sectors/mechanical-engineering","https://work.chron.com/difference-between-mechanical-engineering-mechanical-engineering-technology-26254.html"]
+    }
+
+
+    {
+        "name": "Engineering",
+        "category": {
+            "id": 1004,
+            "name": "Chemical",
+            "brand": "Minna"
+        },
+        "price": 400.04,
+        "currency": "NGN",
+        "discount": 4.04,
+        "discountDescription": "End of the year offer",
+        "imageURLs": ["https://eece.wustl.edu/academics/undergraduate-programs/BS-in-Chemical-Engineering.html", "https://cheme.stanford.edu/academics-admissions/where-do-chemical-engineers-work", "https://blog.frontiersin.org/2019/09/27/zero-emissions-and-zero-incidents-too-good-to-be-true/"]
+    }
+
+
+{
+        "name": "Engineering",
+        "category": {
+            "id": 1005,
+            "name": "Agriculture",
+            "brand": "Minna"
+        },
+        "price": 500.05,
+        "currency": "NGN",
+        "discount": 5.05,
+        "discountDescription": "End of the year offer",
+        "imageURLs": ["https://cals.ncsu.edu/biological-and-agricultural-engineering/", "https://www.telegraphindia.com/edugraph/career/agricultural-engineering-ug-and-pg-courses-entrance-exams-and-prospects/cid/1864411", "https://www.britannica.com/technology/agricultural-engineering"]
+    }
+
+
+    {
+        "name": "Demo Engineering",
+        "category": {
+            "id": 1006,
+            "name": "Demo",
+            "brand": "Abuja"
+        },
+        "price": 600.06,
+        "currency": "NGN",
+        "discount": 6.06,
+        "discountDescription": "End of the year offer",
+        "imageURLs": ["https://nucleus.iaea.org/sites/fusionportal/Pages/DEMO-Concepts.aspx", "https://m.facebook.com/Demo-Engineering-Company-Ltd-148779255652704/", "https://johnsonting.art/projects/OyOYwy"]
+    }
